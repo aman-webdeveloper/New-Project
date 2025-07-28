@@ -1,0 +1,271 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: white;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.navbar-brand span {
+  color: #ffc107;
+}
+
+footer {
+  background: #111;
+  color: #ccc;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.card,
+.team-card {
+  border: none;
+  border-radius: 15px;
+  background-color: #1e2a38;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.card:hover,
+.team-card:hover {
+  transform: translateY(-10px);
+  background-color: #263b50;
+}
+
+.form-control,
+.btn {
+  border-radius: 10px;
+}
+
+.icon-box {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #ffc107;
+}
+
+h1,
+h2,
+h5 {
+  color: #ffc107;
+}
+
+.team-img {
+  border-radius: 20%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.team-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.5);
+}
+
+.social-icon {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  color: gold;
+  transform: scale(1.2);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #444;
+  color: white;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.social-icon .fa-linkedin:hover {
+  color: #0077b5;
+}
+
+.social-icon .fa-github:hover {
+  color: #f5c518;
+}
+
+.social-icon .fa-instagram:hover {
+  color: #e1306c;
+}
+
+.team-card .social-icons {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+.team-card:hover .social-icons {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.container p {
+  color: white;
+}
+
+#typed-text {
+  font-weight: 600;
+  font-size: 2.25rem;
+  transition: color 0.3s ease;
+}
+
+.typewriter-text {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #00e0ff;
+  display: inline-block;
+  position: relative;
+}
+
+#cursor {
+  display: inline-block;
+  margin-left: 5px;
+  color: #00e0ff;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.contact-form input,
+.contact-form textarea {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #f5c518;
+  box-shadow: 0 0 8px rgba(245, 197, 24, 0.4);
+}
+
+.contact-form button:hover {
+  background-color: #ffcc00;
+  transform: scale(1.03);
+  transition: 0.3s ease;
+}
+
+.dark-input {
+  background-color: #1f1f1f;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.dark-input::placeholder {
+  color: #ccc;
+}
+
+.dark-input:focus {
+  border-color: #f5c518;
+  box-shadow: 0 0 8px rgba(245, 197, 24, 0.4);
+  background-color: #262626;
+}
+
+/* --- Responsive Fixes --- */
+@media (max-width: 768px) {
+  h1,
+  h2,
+  h5 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .card,
+  .team-card {
+    margin-bottom: 20px;
+  }
+
+  .team-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .social-icons {
+    gap: 8px;
+  }
+
+  .social-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .typewriter-text {
+    font-size: 1.75rem;
+  }
+
+  #typed-text {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .typewriter-text {
+    font-size: 1.5rem;
+  }
+
+  #typed-text {
+    font-size: 1.25rem;
+  }
+
+  .team-img {
+    border-radius: 12%;
+  }
+
+  .social-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  h1,
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .navbar-brand span {
+    font-size: 1rem;
+  }
+}
